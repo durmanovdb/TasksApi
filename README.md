@@ -126,7 +126,7 @@ Requests with JSON payload must include `Content-Type: application/json` header 
 
 
 **Example of response 404 Not-Found:**
-```
+```json
 {
   "status": "not_found"
 }
@@ -150,7 +150,7 @@ Accepts query parameters in the URL (e.g. /tasks?status=completed)
 | `items_per_page` | integer | (Optional) Items per page (default 10).                |
 
 **Response:**
-```json
+```
 {
   "status": "ok",
   "data": <array of tasks>,
@@ -169,7 +169,7 @@ Path: `/tasks`
 Method: `POST`
 
 **Request parameters (JSON):**
-```json
+```
 {
   "text":   <task description>,
   "status": <task status>
@@ -177,7 +177,7 @@ Method: `POST`
 ```
 
 **Response:**
-```json
+```
 {
   "status": "ok",
   "data": {
@@ -196,7 +196,7 @@ Method: `GET`
 Accepts the task identifier in `<id>`.
 
 **Response:**
-```json
+```
 {
   "status": "ok",
   "data":   <task>
@@ -214,7 +214,7 @@ Accepts the task identifier in `<id>`.
 Request parameters are the same as for creating tasks, however all parameters are optional, and you can update only one field (e.g., `status`).
 
 **Request parameters (JSON):**
-```json
+```
 {
   "text":   <task description>,
   "status": <task status>
@@ -222,7 +222,7 @@ Request parameters are the same as for creating tasks, however all parameters ar
 ```
 
 **Response:**
-```json
+```
 {
   "status": "ok"
 }
@@ -238,7 +238,7 @@ Method: `DELETE`
 Accepts the task identifier in `<id>`.
 
 **Response:**
-```json
+```
 {
   "status": "ok"
 }
