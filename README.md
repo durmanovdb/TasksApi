@@ -33,7 +33,7 @@ The API will be available at http://localhost:8080
 
 
 
-## Environment Variables and .env
+## ⚙ Environment Variables and .env
 
 The server can accept the following environment variables:
 ```
@@ -132,7 +132,7 @@ Requests with JSON payload must include `Content-Type: application/json` header 
 
 
 
-## ⚙ API Endpoints
+## 📍 API Endpoints
 
 ### ▶️ Get Task List
 Path: `/tasks`
