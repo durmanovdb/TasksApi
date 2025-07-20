@@ -24,6 +24,7 @@ The project is created on Node.js + Express.
 To deploy the project in Docker, you first need to create an **Image**.
 
 `cd <project folder>`
+
 `docker build -t <name of your image> .`
 
 After that, you can run container with your **Image** using the simple command:
