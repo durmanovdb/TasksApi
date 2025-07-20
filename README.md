@@ -48,7 +48,7 @@ DB_SCHEMA_PATH="db/schema.sql"
 # SQLite database file name, the database file will be created inside the db/ folder
 DB_FILE_NAME="tasks.db"
 ```
-(These are default values. If environment variables are not provided, the server will use default values.)
+These are default values. If environment variables are not provided, the server will use default values.
 
 
 
@@ -63,7 +63,7 @@ Tasks in the database have the following structure:
 | `created_at` | datetime | Date of task creation. (Automatically set)                           |
 | `updated_at` | datetime | Date of last task update. (Automatically updated via SQLite TRIGGER) |
 
-(For more details, see `db/schema.sql`)
+For more details, see `db/schema.sql`
 
 
 
@@ -74,7 +74,7 @@ Base API URL: `/api/v1` + endpoint path. (e.g. `/api/v1/tasks`)
 Requests with JSON payload must include `Content-Type: application/json` header (or `application/json; charset=utf-8`)
 
 **Example of successful response:**
-```
+```json
 {
   "status": "ok",
   "data": {
@@ -87,7 +87,7 @@ Requests with JSON payload must include `Content-Type: application/json` header 
 }
 ```
 
-```
+```json
 {
     "status": "ok",
     "data": [
@@ -115,7 +115,7 @@ Requests with JSON payload must include `Content-Type: application/json` header 
 ```
 
 **Example of error response:**
-```
+```json
 {
   "status": "error",
   "error": {
@@ -150,7 +150,7 @@ Accepts query parameters in the URL (e.g. /tasks?status=completed)
 | `items_per_page` | integer | (Optional) Items per page (default 10).                |
 
 **Response:**
-```
+```json
 {
   "status": "ok",
   "data": <array of tasks>,
@@ -169,7 +169,7 @@ Path: `/tasks`
 Method: `POST`
 
 **Request parameters (JSON):**
-```
+```json
 {
   "text":   <task description>,
   "status": <task status>
@@ -177,7 +177,7 @@ Method: `POST`
 ```
 
 **Response:**
-```
+```json
 {
   "status": "ok",
   "data": {
@@ -196,7 +196,7 @@ Method: `GET`
 Accepts the task identifier in `<id>`.
 
 **Response:**
-```
+```json
 {
   "status": "ok",
   "data":   <task>
@@ -214,7 +214,7 @@ Accepts the task identifier in `<id>`.
 Request parameters are the same as for creating tasks, however all parameters are optional, and you can update only one field (e.g., `status`).
 
 **Request parameters (JSON):**
-```
+```json
 {
   "text":   <task description>,
   "status": <task status>
@@ -222,7 +222,7 @@ Request parameters are the same as for creating tasks, however all parameters ar
 ```
 
 **Response:**
-```
+```json
 {
   "status": "ok"
 }
@@ -238,7 +238,7 @@ Method: `DELETE`
 Accepts the task identifier in `<id>`.
 
 **Response:**
-```
+```json
 {
   "status": "ok"
 }
